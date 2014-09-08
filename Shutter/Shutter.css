@@ -1,0 +1,104 @@
+@CHARSET "UTF-8";
+
+html{width:100%; height:200%;}
+
+body{height:100%; margin:0}
+
+.shatter{
+	z-index:3;
+	height:55%;
+	background-color:#666;
+	background-image:url(./line.png);  /* シャッターのライン */ 
+	background-repeat:repeat-y;  /* 縦方向にのみ背景画像を繰り返して表示 */
+	border-bottom:3px solid #222;
+	-webkit-box-shadow: 0 8px 8px #aaa;
+	   -moz-box-shadow: 0 8px 8px #aaa;
+	    -ms-box-shadow: 0 8px 8px #aaa;
+	     -o-box-shadow: 0 8px 8px #aaa;
+			box-shadow: 0 8px 8px #aaa;
+}
+
+.top{
+	z-index:5;
+	position:fixed;
+	top:0;
+	background-color:#778899;
+	width:100%;
+	height:40px;
+	-webkit-box-shadow: 0 5px 8px #333;
+	   -moz-box-shadow: 0 5px 8px #333;
+	    -ms-box-shadow: 0 5px 8px #333;
+	     -o-box-shadow: 0 5px 8px #333;
+			box-shadow: 0 5px 8px #333;
+}
+
+.left,
+.right{
+	z-index:4;
+	position:fixed;
+	top:40px;
+	background-color:#778899;
+	width:10px;
+	height:100%;
+}
+.left{
+	left:0;
+	-webkit-box-shadow: 5px 0 8px #555;
+	   -moz-box-shadow: 5px 0 8px #555;
+	    -ms-box-shadow: 5px 0 8px #555;
+	     -o-box-shadow: 5px 0 8px #555;
+			box-shadow: 5px 0 8px #555;
+}
+.right{
+	right:0;
+	-webkit-box-shadow: -5px 0 8px #555;
+	   -moz-box-shadow: -5px 0 8px #555;
+	    -ms-box-shadow: -5px 0 8px #555;
+	     -o-box-shadow: -5px 0 8px #555;
+			box-shadow: -5px 0 8px #555;
+}
+
+.sns{
+	z-index: -1;
+	position: fixed;
+	top: 150px;
+	left: 10%;
+	width: 80%;
+	padding: 5px 5px 25px;
+	background-color: #6495ED;
+	border-radius: 8px;
+	text-align: center;
+	-webkit-box-shadow: 5px 5px 5px #555;
+	   -moz-box-shadow: 5px 5px 5px #555;
+	    -ms-box-shadow: 5px 5px 5px #555;
+	     -o-box-shadow: 5px 5px 5px #555;
+			box-shadow: 5px 5px 5px #555;
+}
+
+.sns p{
+	font-size: 30px;
+	line-height: 1.3;
+}
+
+.sns iframe{
+	margin: 5px 0;
+}
+
+.close{
+	z-index: -1;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	width: 70px;
+	height: 30px;
+	text-align: center;
+	background-color: #245;
+	color: #fff;  /* 文字色 */
+	border-radius: 6px;
+	line-height: 30px;
+	-webkit-box-shadow: 5px 5px 5px #777;
+	   -moz-box-shadow: 5px 5px 5px #777;
+	    -ms-box-shadow: 5px 5px 5px #777;
+	     -o-box-shadow: 5px 5px 5px #777;
+			box-shadow: 5px 5px 5px #777;
+}
