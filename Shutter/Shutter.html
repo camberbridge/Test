@@ -18,11 +18,59 @@
     <a href="https://twitter.com" class="twitter-share-button" data-lang="ja" data-hashtags="css, hoge, html">ツイート</a>
     <a href="http://b.hatena.ne.jp" class="hatena-bookmark-button" data-hatena-bookmark-title="がらがら" data-hatena-bookmark-layout="standard-noballoon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
     <p><span class="jst-ml">(^q^)(^q^)(^q^)</span><span class="jst-kurukuru">(^q^)(^q^)(^q^)(^q^)</span><span class="jst-mr">(^q^)(^q^)(^q^)</span></p>
-    <script>document.write("<p>ほげえええええええええええ</p>");</script>
+<!----- ここからオサシりんごテスト ----->
+    <p><a onClick="osari()">aほげえええええええええええ</a> a=<span id="a">0</span></p>    
+    <p><a onClick="singo()">bほげえええええええええええ</a></span> b=<span id="b">0</span></p>
   </div>
 
   <p class="close">閉じる</p>
 
+
+  <script>
+  	var $counta = 0;
+  	var $countb = 0;
+  
+  	function osari(){
+  	    ++$counta;
+  		if($counta < 2){
+	  		document.getElementById("a").innerHTML = $counta;
+	  		location.href="#hogea";
+	  		$countb = 0;
+	  		document.getElementById("b").innerHTML = $countb;
+	    }
+  	}
+  	
+  	function singo(){
+  		++$countb;
+  		if($countb < 2){
+  			document.getElementById("b").innerHTML = $countb;
+  			location.href="#hogeb";
+  			$counta = 0;
+  			document.getElementById("a").innerHTML = $counta;
+  		}
+  	}
+  	
+  	$(function(){
+  		var mousewheelevent = 'onwheel' 
+  		                      in 
+  		                      document ? 'wheel' : 'onmousewheel' 
+  		                      in 
+  		                      document ? 'mousewheel' : 'DOMMouseScroll';
+		$(document).on(mousewheelevent, function(e){
+			e.preventDefault();
+			var delta = e.originalEvent.deltaY ? -(e.originalEvent.deltaY) :
+			            e.originalEvent.wheelDelta ? e.originalEvent.wheelDelta :
+			            -(e.originalEvent.detail);
+			if(delta < 0){
+				$counta = 0;
+				$countb = 0;
+			}else{
+				$counta = 0;
+				$countb = 0;
+			}
+		})
+  	})
+  </script>
 
   <script type="text/javascript" src="jquery.js"></script>
   <script type="text/javascript" src="jquery.transit.js"></script>
