@@ -1,3 +1,6 @@
+/*
+ * ベンダープレフィックスあり
+ */
 @CHARSET "UTF-8";
 
 html{width:100%; height:200%;}
@@ -8,8 +11,8 @@ body{height:100%; margin:0}
 	z-index:3;
 	height:55%;
 	background-color:#666;
-	background-image:url(./line.png);  /* 繧ｷ繝｣繝�繧ｿ繝ｼ縺ｮ繝ｩ繧､繝ｳ */ 
-	background-repeat:repeat-y;  /* 邵ｦ譁ｹ蜷代↓縺ｮ縺ｿ閭梧勹逕ｻ蜒上ｒ郢ｰ繧願ｿ斐＠縺ｦ陦ｨ遉ｺ */
+	background-image:url(./line.png);  /* シャッターのライン */ 
+	background-repeat:repeat-y;  /* 縦方向にのみ背景画像を繰り返して表示 */
 	border-bottom:3px solid #222;
 	-webkit-box-shadow: 0 8px 8px #aaa;
 	   -moz-box-shadow: 0 8px 8px #aaa;
@@ -61,6 +64,11 @@ body{height:100%; margin:0}
 .sns{
 	z-index: -1;
 	position: fixed;
+	-webkit-transform: translateZ(0); /* transitionがfixedにネストされているとtransit効かないからこの行必須 */
+       -moz-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+         -o-transform: translateZ(0);
+            transform: translateZ(0);
 	top: 150px;
 	left: 10%;
 	width: 80%;
@@ -93,7 +101,7 @@ body{height:100%; margin:0}
 	height: 30px;
 	text-align: center;
 	background-color: #245;
-	color: #fff;  /* 譁�蟄苓牡 */
+	color: #fff;  /* 文字色 */
 	border-radius: 6px;
 	line-height: 30px;
 	-webkit-box-shadow: 5px 5px 5px #777;
@@ -102,3 +110,5 @@ body{height:100%; margin:0}
 	     -o-box-shadow: 5px 5px 5px #777;
 			box-shadow: 5px 5px 5px #777;
 }
+
+
