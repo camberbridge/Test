@@ -1,5 +1,5 @@
 /**
- * なんでも
+ * cssでアニメーション by transition
  */
 $(function(){
   	//$('.jst-mr').transition({
