@@ -111,4 +111,8 @@ body{height:100%; margin:0}
 			box-shadow: 5px 5px 5px #777;
 }
 
+#hand{
+	cursor: hand;
+	cursor: pointer;
+}
 
